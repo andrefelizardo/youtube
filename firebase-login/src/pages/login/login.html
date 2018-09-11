@@ -1,0 +1,18 @@
+<ion-content padding>
+  <h1>Bem vindo de volta</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="email" placeholder="E-mail"
+        formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Senha"
+        formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button type="submit" ion-button [disabled]="loginForm.invalid">Fazer login</button>
+    </div>
+  </form>
+</ion-content>

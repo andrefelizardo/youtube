@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cálculo IMC
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <h2 id="cLculoIMC-heading1" style="color:#000000;">
+    Faça aqui o cálculo do seu IMC
+  </h2>
+  <form id="cLculoIMC-form1">
+    <div class="spacer" style="width:300px;height:66px;" id="cLculoIMC-spacer1"></div>
+    <ion-item id="cLculoIMC-input2">
+      <ion-label>
+        Peso
+      </ion-label>
+      <ion-input type="number" placeholder="kg" #peso></ion-input>
+    </ion-item>
+    <ion-item id="cLculoIMC-input3">
+      <ion-label>
+        Altura
+      </ion-label>
+      <ion-input type="number" placeholder="cm" #altura></ion-input>
+    </ion-item>
+  </form>
+  <button id="cLculoIMC-button1" ion-button color="positive" block (click)="calculaIMC(peso.value, altura.value)">
+    Calcular!
+  </button>
+  <h3 id="cLculoIMC-heading2" style="color:#000000;">
+    Resultado: {{ resultadoIMC }}
+  </h3>
+</ion-content>
