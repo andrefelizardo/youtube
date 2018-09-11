@@ -1,7 +1,7 @@
 
 # YouTube - André Felizardo
 
-Código fonte apresentado nos vídeos do YouTube do blog [andrefelizardo](www.andrefelizardo.com.br/blog).
+Código fonte apresentado nos vídeos do YouTube do blog [andrefelizardo](http://www.andrefelizardo.com.br/blog).
 
 ### Canal YouTube
  - [Link YouTube](https://www.youtube.com/channel/UCewES6PpWIEvrHltjiohzBQ)
