@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,6 +32,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
     StatusBar,
     SplashScreen,
     AngularFireAuth,
+    AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

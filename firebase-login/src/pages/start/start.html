@@ -7,12 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>start-page</ion-title>
+    <ion-title>Tarefas</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-item>
+    <ion-input type="text" placeholder="Digite sua tarefa" [(ngModel)]="task"></ion-input>
+  </ion-item>
+  <button ion-button block class="button-add" (click)="addTask(task)"
+  [disabled]="!task || task.length < 3">Adicionar tarefa</button>
+  <div padding>
+    <ul>
+      <li *ngFor="let item of list">
+        {{ item.task }}
+      </li>
+    </ul>
+  </div>
 </ion-content>

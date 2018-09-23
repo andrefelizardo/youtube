@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 /**
  * Generated class for the StartPage page.
@@ -17,11 +19,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  uid: string;
+  task;
+  list;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public storage: Storage,
+    public db: AngularFireDatabase
+    ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StartPage');
+    this.storage.get('user')
+    .then((resolve) => {
+      this.uid = resolve;
+      this.getList();
+    })
+  }
+
+  addTask(task: string) {
+    this.db.database.ref('/tasks').child(this.uid).push({
+      task: task
+    })
+    .then(() => {
+      this.task = "";
+    })
+  }
+
+  getList() {
+    let listDB = this.db.database.ref('/tasks').child(this.uid);
+    listDB.on('value', (snapshot) => {
+      const items = snapshot.val();
+      if(items) {
+        this.list = Object.keys(items).map(i => items[i]);
+      }
+    })
   }
 
 }
