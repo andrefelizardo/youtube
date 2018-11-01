@@ -20,3 +20,4 @@ Particularmente recomendo o uso do Visual Studio Code como editor - que é o mes
  - [Ionic 3 + Firebase - Login com Firebase](https://github.com/andrefelizardo/youtube/tree/master/firebase-login/)
  - [Ionic 3 + Firebase - Ionic Storage](https://github.com/andrefelizardo/youtube/tree/feature/realtime-database/firebase-login/)
  - [Ionic 3 + Firebase - Realtime Database](https://github.com/andrefelizardo/youtube/tree/feature/realtime-database/firebase-login/)
+ - [Ionic 3 + Firebase - Iniciando projeto de CRUD](https://github.com/andrefelizardo/youtube/tree/crud/video-01/firebase-crud/)
