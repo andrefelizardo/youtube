@@ -1,6 +1,35 @@
 <!-- Generated template for the ContatoFormComponent component -->
 <div>
-  <form>
-    
+  <form novalidate [formGroup]="contatoForm" (ngSubmit)="cadastraContato()">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Nome" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Empresa" formControlName="empresa"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="tel" placeholder="Telefone" formControlName="telefone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="CEP" formControlName="cep"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Rua" formControlName="rua"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Bairro" formControlName="bairro"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="Número" formControlName="numero"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Cidade" formControlName="cidade"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Estado" formControlName="uf"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button type="submit" ion-button block [disabled]="contatoForm.invalid">Salvar</button>
   </form>
 </div>
