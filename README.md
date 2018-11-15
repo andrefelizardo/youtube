@@ -23,4 +23,4 @@ Particularmente recomendo o uso do Visual Studio Code como editor - que é o mes
   - [Ionic 3 + Firebase - Iniciando projeto de CRUD (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-01/firebase-crud/)
   - [Ionic 3 + Firebase - Criando componentes no aplicativo (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-01/firebase-crud/)
    - [Ionic 3 + Firebase - Criando e validando formulário (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-02/firebase-crud/)
-- [Ionic 3 + Firebase - Utilizando o evento blur no formulário](https://github.com/andrefelizardo/youtube/tree/crud/video-04/firebase-crud/)
+- [Ionic 3 + Firebase - Utilizando o evento blur no formulário (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-04/firebase-crud/)
