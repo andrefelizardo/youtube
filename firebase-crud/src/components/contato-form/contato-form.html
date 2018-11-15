@@ -12,7 +12,7 @@
         <ion-input type="tel" placeholder="Telefone" formControlName="telefone"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="number" placeholder="CEP" formControlName="cep"></ion-input>
+        <ion-input type="number" placeholder="CEP" formControlName="cep" (ionBlur)="buscaCep()"></ion-input>
       </ion-item>
       <ion-item>
         <ion-input type="text" placeholder="Rua" formControlName="rua"></ion-input>

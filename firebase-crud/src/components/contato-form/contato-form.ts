@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Http } from '@angular/http';
 
 /**
  * Generated class for the ContatoFormComponent component.
@@ -15,7 +16,7 @@ export class ContatoFormComponent {
 
   contatoForm: FormGroup;
 
-  constructor(public formbuilder: FormBuilder) {
+  constructor(public formbuilder: FormBuilder, public http: Http) {
     this.contatoForm = this.formbuilder.group({
       nome: [null, [Validators.required, Validators.minLength(5)]],
       empresa: [null, [Validators.minLength(3)]],
@@ -23,10 +24,18 @@ export class ContatoFormComponent {
       cep: [null, [Validators.required, Validators.minLength(8), Validators.maxLength(8)]],
       rua: [null, [Validators.required]],
       bairro: [null, [Validators.required]],
-      numero: [null],
+      numero: [null, [Validators.required]],
       cidade: [null, [Validators.required]],
       uf: [null, [Validators.required]]
     })
+  }
+
+  buscaCep() {
+    const cepValue = this.contatoForm.controls['cep'].value;
+    const isValid = this.contatoForm.controls['cep'].valid;
+    if(isValid) {
+      
+    }
   }
 
   cadastraContato() {
