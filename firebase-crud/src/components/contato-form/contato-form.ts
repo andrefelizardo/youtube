@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 /**
  * Generated class for the ContatoFormComponent component.
@@ -34,7 +35,11 @@ export class ContatoFormComponent {
     const cepValue = this.contatoForm.controls['cep'].value;
     const isValid = this.contatoForm.controls['cep'].valid;
     if(isValid) {
-      
+      this.http.get(`https://viacep.com.br/ws/${cepValue}/json/`)
+      .map(res => res.json())
+      .subscribe(data => {
+        console.log(data);
+      })
     }
   }
 
