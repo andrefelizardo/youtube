@@ -1,3 +1,10 @@
 page-home {
-
+    .card p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card .empresa {
+        font-size: 75%;
+    }
 }

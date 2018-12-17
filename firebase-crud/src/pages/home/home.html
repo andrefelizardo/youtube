@@ -8,5 +8,14 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Home</h2>
+  <ion-card *ngFor="let contato of contatos">
+    <ion-card-content>
+      <ion-card-title>
+        {{contato.nome}} <span class="empresa">({{contato.empresa}})</span>
+        </ion-card-title>
+      <p>
+        {{contato.telefone}} | {{contato.rua}} | {{contato.uf}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
