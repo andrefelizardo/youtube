@@ -29,3 +29,4 @@ Particularmente recomendo o uso do Visual Studio Code como editor - que é o mes
 - [Ionic 3 + Firebase - Inserindo dados no Firebase Database (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-07/firebase-crud/)
 - [Ionic 3 + Firebase - Usando cards no Ionic (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-08-09/firebase-crud/)
 - [Ionic 3 + Firebase - Customizando CSS no Ionic 3 (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-08-09/firebase-crud/)
+- [Ionic 3 + Firebase - Buscando dados no Firebase (firebase-crud)](https://github.com/andrefelizardo/youtube/tree/crud/video-10/firebase-crud/)
