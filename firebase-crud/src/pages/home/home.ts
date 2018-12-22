@@ -24,7 +24,9 @@ export class HomePage {
     this.http.get('https://crud-ionic-e6e42.firebaseio.com/contatos.json')
     .map(res => res.json())
     .subscribe(data => {
-      this.trataDados(data);
+      if(data !== null && data !== undefined) {
+        this.trataDados(data);
+      }
     })
   }
 

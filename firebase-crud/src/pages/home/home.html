@@ -8,14 +8,19 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let contato of contatosDb">
-    <ion-card-content>
-      <ion-card-title>
-        {{contato.nome}} <span class="empresa">({{contato.empresa}})</span>
+  <div *ngIf="contatosDb.length > 0; else estadoVazio">
+    <ion-card *ngFor="let contato of contatosDb">
+      <ion-card-content>
+        <ion-card-title>
+          {{contato.nome}} <span class="empresa">({{contato.empresa}})</span>
         </ion-card-title>
-      <p>
-        {{contato.telefone}} | {{contato.rua}} | {{contato.uf}}
-      </p>
-    </ion-card-content>
-  </ion-card>
+        <p>
+          {{contato.telefone}} | {{contato.rua}} | {{contato.uf}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ng-template #estadoVazio>
+    <h2>Você ainda não tem contatos. Utilize o menu para cadastrar o seu primeiro contato.</h2>
+  </ng-template>
 </ion-content>
